@@ -1,12 +1,41 @@
-# iac-lab01-martes
+# IAC Lab 01 - Despliegue Web con Docker y Nginx
 
-Tenemos código de una aplicación web.
-Se compone por un archivo HTML que tiene como contenido: WEB01
+## Descripción
 
-Quiero poder publicar esta web, especificamente una sola copia como primera instancia
+Este proyecto consiste en el despliegue de dos aplicaciones web estáticas utilizando Docker y Nginx.  
+Cada aplicación muestra un contenido HTML diferente:
 
-TAREA:
-- Desplegar dos web, mostrar Web01, y Web02 como contenido
-- Los puertos deben estar configurados en 4000 y 4001
-- Gestionar carpetas para orden
-- Hacer uso de Gitflow/Conventional Commits
+- Web01 → muestra "Web 01"
+- Web02 → muestra "Web 02"
+
+---
+
+## Estructura del Proyecto
+│
+├── docker-compose.yml
+├── README.md
+└── src/
+├── web01/
+│ ├── Dockerfile
+│ └── index.html
+│
+└── web02/
+├── Dockerfile
+└── index.html
+
+---
+
+## Tecnologías utilizadas
+
+- Docker
+- Docker Compose
+- Nginx
+
+---
+
+## Despliegue
+
+### 1. Construir y levantar los contenedores
+
+```bash
+docker compose up -d --build
