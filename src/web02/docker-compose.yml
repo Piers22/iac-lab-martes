@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web01:
+    build: ./src/web01
+    container_name: web01-container
+    ports:
+      - "4000:80"
+
+  web02:
+    build: ./src/web02
+    container_name: web02-container
+    ports:
+      - "4001:80"
